@@ -21,6 +21,36 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
+  <!-- Intro Video Overlay -->
+  <div id="intro-video" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
+    <video id="carVideo" autoplay muted playsinline class="w-full h-full object-cover">
+      <source src="Untitled design.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button onclick="document.getElementById('intro-video').style.display='none'" class="absolute top-4 right-4 bg-white text-black px-4 py-2 text-sm font-bold rounded hover:bg-gray-200 z-50">Skip</button>
+  </div>
+  <script>
+  // Fade out after video ends or skip
+  const videoOverlay = document.getElementById('intro-video');
+  const video = document.getElementById('carVideo');
+  const skipBtn = document.querySelector('#intro-video button');
+
+  function hideVideo() {
+    videoOverlay.classList.add('fade-out');
+    setTimeout(() => {
+      videoOverlay.style.display = 'none';
+    }, 1000); // matches fade-out duration
+  }
+
+  video.addEventListener('ended', hideVideo);
+  skipBtn.addEventListener('click', hideVideo);
+</script>
+<style>
+  #intro-video.fade-out {
+    transition: opacity 1s ease;
+    opacity: 0;
+  }
+</style>
 
   <!-- Header -->
   <header class="bg-white shadow sticky top-0 z-50">
@@ -37,49 +67,104 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative h-screen bg-cover bg-center" style="background-image: url('');">
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Lease Your Dream Car</h1>
-      <p class="text-lg md:text-2xl mb-6">Flexible deals. Instant quotes. No hidden fees.</p>
-      <form class="flex flex-wrap justify-center gap-4 bg-white bg-opacity-20 p-4 rounded-lg">
-        <input type="text" placeholder="Search brand or model" class="px-4 py-2 rounded border border-white text-black">
-        <select class="px-4 py-2 rounded border border-white text-black">
-          <option>Vehicle Type</option>
-          <option>Car</option>
-          <option>Van</option>
-        </select>
-        <select class="px-4 py-2 rounded border border-white text-black">
-          <option>Lease Type</option>
-          <option>Personal</option>
-          <option>Business</option>
-        </select>
-        <button type="submit" class="bg-yellow-400 px-4 py-2 rounded font-bold hover:bg-yellow-300">Search</button>
-      </form>
-    </div>
-  <section id="offers" class="py-12 bg-gray-50">
+  <section class="relative h-screen overflow-hidden">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+    <source src="Seach.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay to Ensure Readability -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-20 flex flex-col justify-center items-center h-full text-center text-white px-4">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Lease Your Dream Car</h1>
+    <p class="text-lg md:text-2xl mb-6">Flexible deals. Instant quotes. No hidden fees.</p>
+    
+    <!-- Search Form -->
+    <form class="flex flex-wrap justify-center gap-4 bg-white bg-opacity-30 backdrop-blur-md p-4 rounded-lg">
+      <input type="text" placeholder="Search brand or model" class="px-4 py-2 rounded border border-white text-black placeholder-gray-700">
+      <select class="px-4 py-2 rounded border border-white text-black">
+        <option>Vehicle Type</option>
+        <option>Car</option>
+        <option>Van</option>
+      </select>
+      <select class="px-4 py-2 rounded border border-white text-black">
+        <option>Lease Type</option>
+        <option>Personal</option>
+        <option>Business</option>
+      </select>
+      <button type="submit" class="bg-yellow-400 px-4 py-2 rounded font-bold hover:bg-yellow-300">Search</button>
+    </form>
+  </div>
+</section>
+
   <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-3xl font-bold mb-8 text-center">Top Car Leasing Deals</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
-        <img src="https://www.lingscars.com/images/cars/grandland-ultimate-hybrid.jpg" alt="Vauxhall Grandland" class="rounded mb-4">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4 relative">
+  <span class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">HOT</span>
+        $1
+  <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-medium px-4 text-center">Petrol • Automatic • 5 Seats</div>
         <h3 class="text-xl font-semibold mb-2">Vauxhall Grandland GS 73kWh</h3>
         <p class="text-gray-700">£188.83/mo • 24 mo • 5k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
         <img src="https://www.lingscars.com/images/cars/id3-pro-58kwh.jpg" alt="Volkswagen ID.3" class="rounded mb-4">
         <h3 class="text-xl font-semibold mb-2">Volkswagen ID.3 Match Pro S</h3>
         <p class="text-gray-700">£280.79/mo • 48 mo • 6k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
         <img src="https://www.lingscars.com/images/cars/2008-gt.jpg" alt="Peugeot 2008" class="rounded mb-4">
         <h3 class="text-xl font-semibold mb-2">Peugeot 2008 PureTech 130 GT</h3>
         <p class="text-gray-700">£207.18/mo • 36 mo • 5k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
-      <!-- Add more deals similarly -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/0ANWbX/s1/2023-bmw-3-series.jpg" alt="BMW 3 Series" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">BMW 3 Series 320i M Sport</h3>
+        <p class="text-gray-700">£329.99/mo • 36 mo • 8k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.jdpower.com/JDPA_2022%20Toyota%20Camry%20TRD%20White%20Front%20Quarter.jpg" alt="Toyota Camry" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Toyota Camry TRD</h3>
+        <p class="text-gray-700">£289.50/mo • 24 mo • 10k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/0xKbm/s1/2022-mercedes-benz-c-class.jpg" alt="Mercedes-Benz C-Class" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Mercedes-Benz C-Class SE</h3>
+        <p class="text-gray-700">£379.00/mo • 48 mo • 6k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/qXZp3/s1/2023-audi-a3.jpg" alt="Audi A3 Sportback" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Audi A3 Sportback Technik</h3>
+        <p class="text-gray-700">£312.40/mo • 36 mo • 5k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/2e99Z/s1/2023-ford-focus.jpg" alt="Ford Focus Titanium" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Ford Focus Titanium EcoBoost</h3>
+        <p class="text-gray-700">£245.00/mo • 36 mo • 8k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/3mPmK/s1/2023-hyundai-tucson-n-line.jpg" alt="Hyundai Tucson N Line" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Hyundai Tucson N Line</h3>
+        <p class="text-gray-700">£299.20/mo • 36 mo • 7k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/qNVbE/s1/2023-kia-sportage.jpg" alt="Kia Sportage GT-Line" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Kia Sportage GT-Line</h3>
+        <p class="text-gray-700">£279.99/mo • 36 mo • 10k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -96,15 +181,50 @@
         <img src="https://www.lingscars.com/images/cars/tonale-veloce.jpg" alt="Alfa Romeo Tonale" class="rounded mb-4">
         <h3 class="text-xl font-semibold mb-2">Alfa Romeo Tonale Veloce</h3>
         <p class="text-gray-700">£286.03/mo • 36 mo • 5k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
       <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
         <img src="https://www.lingscars.com/images/cars/5008-gt.jpg" alt="Peugeot 5008" class="rounded mb-4">
         <h3 class="text-xl font-semibold mb-2">Peugeot 5008 1.5 BlueHDi GT</h3>
         <p class="text-gray-700">£222.78/mo • 36 mo • 5k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
-      <!-- Add more premium cars similarly -->
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/gk6ox/s1/2023-volvo-xc60.jpg" alt="Volvo XC60" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Volvo XC60 B5 R-Design</h3>
+        <p class="text-gray-700">£399.00/mo • 36 mo • 8k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/8JqWz/s1/2023-jaguar-xe.jpg" alt="Jaguar XE" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Jaguar XE R-Dynamic S</h3>
+        <p class="text-gray-700">£412.50/mo • 36 mo • 6k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/nBooP/s1/2023-lexus-nx.jpg" alt="Lexus NX" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Lexus NX 350h F Sport</h3>
+        <p class="text-gray-700">£438.00/mo • 48 mo • 10k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/JXZ9x/s1/2023-mercedes-benz-glc.jpg" alt="Mercedes GLC" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Mercedes-Benz GLC 220d AMG Line</h3>
+        <p class="text-gray-700">£489.00/mo • 36 mo • 8k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/KnJ13/s1/2023-bmw-x3.jpg" alt="BMW X3" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">BMW X3 xDrive20d M Sport</h3>
+        <p class="text-gray-700">£459.00/mo • 36 mo • 10k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/qnRoJ/s1/2023-audi-q5.jpg" alt="Audi Q5" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Audi Q5 S Line 40 TDI</h3>
+        <p class="text-gray-700">£475.99/mo • 48 mo • 10k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -121,15 +241,50 @@
         <img src="https://www.lingscars.com/images/cars/corsa-ultimate.jpg" alt="Vauxhall Corsa" class="rounded mb-4">
         <h3 class="text-xl font-semibold mb-2">Vauxhall Corsa 1.2 Turbo Ultimate</h3>
         <p class="text-gray-700">£174.12/mo • 36 mo • 5k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
         <img src="https://www.lingscars.com/images/cars/500-mild-hybrid.jpg" alt="Fiat 500" class="rounded mb-4">
         <h3 class="text-xl font-semibold mb-2">Fiat 500 1.0 Mild Hybrid</h3>
         <p class="text-gray-700">£161.00/mo • 36 mo • 5k mi/yr</p>
-        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
       </div>
-      <!-- Add more saver cars similarly -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/0MZ2q/s1/2023-dacia-sandero.jpg" alt="Dacia Sandero" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Dacia Sandero Essential TCe</h3>
+        <p class="text-gray-700">£139.99/mo • 24 mo • 6k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/7zE6A/s1/2023-kia-picanto.jpg" alt="Kia Picanto" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Kia Picanto 1 Air</h3>
+        <p class="text-gray-700">£149.50/mo • 36 mo • 5k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/gm3M8/s1/2023-toyota-aygo-x.jpg" alt="Toyota Aygo X" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Toyota Aygo X Edge</h3>
+        <p class="text-gray-700">£159.99/mo • 36 mo • 6k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/q6M9A/s1/2023-hyundai-i10.jpg" alt="Hyundai i10" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Hyundai i10 SE Connect</h3>
+        <p class="text-gray-700">£165.00/mo • 36 mo • 5k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/6NXA7/s1/2023-suzuki-swift.jpg" alt="Suzuki Swift" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Suzuki Swift SZ-L</h3>
+        <p class="text-gray-700">£169.99/mo • 36 mo • 6k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://cdn.motor1.com/images/mgl/yel3k/s1/2023-renault-clio.jpg" alt="Renault Clio" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Renault Clio Iconic TCe</h3>
+        <p class="text-gray-700">£175.00/mo • 36 mo • 7k mi/yr</p>
+        <a href="https://www.lingscars.com/car-leasing" class="text-blue-600 mt-4 inline-block" target="_blank" rel="noopener noreferrer">View Offer →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -150,12 +305,57 @@
   </section>
 
   <!-- Footer -->
-  <footer id="contact" class="bg-gray-800 text-white py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="mb-2">&copy; 2025 Lings Cars. All rights reserved.</p>
-      <p class="text-sm">Inspired by the original LINGsCARS design, reimagined professionally.</p>
-    </div>
-  </footer>
+  
 
+  <!-- About Us -->
+  <section id="about" class="py-12 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
+        At LINGsCARS, we’re redefining car leasing with a bold, honest, and fun approach. Since 2000, we've delivered unbeatable personal and business lease deals with full transparency, no hidden fees, and a dedication to customer satisfaction. Our unique personality and straightforward service have made us one of the UK's top-rated car leasing providers. Whether you're after an electric car, luxury SUV, or budget runabout, we’ll get you behind the wheel with confidence and style.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  $1
+
+<footer class="bg-gray-800 text-white py-8 mt-12">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <div class="flex justify-center space-x-4 mb-4">
+      <a href="https://facebook.com/lingscars" target="_blank" class="text-white hover:text-blue-400" aria-label="Facebook">
+        <!-- Facebook Icon -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.62 9.87v-6.99H8v-2.88h2.38V9.5c0-2.36 1.4-3.66 3.55-3.66 1.03 0 2.11.18 2.11.18v2.3h-1.19c-1.18 0-1.55.73-1.55 1.47v1.76H18l-.38 2.88h-2.47v6.99A10.01 10.01 0 0022 12z"/></svg>
+      </a>
+      <a href="https://twitter.com/lingscars" target="_blank" class="text-white hover:text-blue-400" aria-label="Twitter">
+        <!-- Twitter Icon -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.35 8.54 8.54 0 01-2.7 1.03 4.25 4.25 0 00-7.3 3.88A12.06 12.06 0 013 5.13a4.25 4.25 0 001.32 5.67 4.22 4.22 0 01-1.92-.53v.05a4.25 4.25 0 003.41 4.17 4.3 4.3 0 01-1.91.07 4.25 4.25 0 003.97 2.96A8.53 8.53 0 012 19.54a12.06 12.06 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.38-.02-.57A8.67 8.67 0 0022.46 6z"/></svg>
+      </a>
+      <a href="https://instagram.com/lingscars" target="_blank" class="text-white hover:text-pink-400" aria-label="Instagram">
+        <!-- Instagram Icon -->
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.25 2.43.42a4.92 4.92 0 011.75 1.1 4.92 4.92 0 011.1 1.75c.17.46.364 1.26.42 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.97-.42 2.43a4.92 4.92 0 01-1.1 1.75 4.92 4.92 0 01-1.75 1.1c-.46.17-1.26.364-2.43.42-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.25-2.43-.42a4.92 4.92 0 01-1.75-1.1 4.92 4.92 0 01-1.1-1.75c-.17-.46-.364-1.26-.42-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.25-1.97.42-2.43a4.92 4.92 0 011.1-1.75 4.92 4.92 0 011.75-1.1c.46-.17 1.26-.364 2.43-.42C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.507.012-4.74.07-1.02.048-1.57.22-1.94.37a3.17 3.17 0 00-1.16.76 3.17 3.17 0 00-.76 1.16c-.15.37-.322.92-.37 1.94-.058 1.233-.07 1.6-.07 4.74s.012 3.507.07 4.74c.048 1.02.22 1.57.37 1.94.17.45.41.84.76 1.16.32.35.71.59 1.16.76.37.15.92.322 1.94.37 1.233.058 1.6.07 4.74.07s3.507-.012 4.74-.07c1.02-.048 1.57-.22 1.94-.37a3.17 3.17 0 001.16-.76 3.17 3.17 0 00.76-1.16c.15-.37.322-.92.37-1.94.058-1.233.07-1.6.07-4.74s-.012-3.507-.07-4.74c-.048-1.02-.22-1.57-.37-1.94a3.17 3.17 0 00-.76-1.16 3.17 3.17 0 00-1.16-.76c-.37-.15-.92-.322-1.94-.37-1.233-.058-1.6-.07-4.74-.07zm0 3.8a5.2 5.2 0 110 10.4 5.2 5.2 0 010-10.4zm0 1.8a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zm5.3-2.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+      </a>
+    </div>
+    <p class="text-sm">© 2025 LINGsCARS | All rights reserved.</p>
+    <p class="text-xs mt-2">This site is a professional redesign inspired by the bold and brilliant original at <a href="https://www.lingscars.com" class="underline text-blue-400">lingscars.com</a>.</p>
+  </div>
+</footer>
+
+$1
+    <div class="flex justify-center space-x-4 mb-4">
+      <a href="https://facebook.com/lingscars" target="_blank" class="text-white hover:text-blue-400" aria-label="Facebook">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.62 9.87v-6.99H8v-2.88h2.38V9.5c0-2.36 1.4-3.66 3.55-3.66 1.03 0 2.11.18 2.11.18v2.3h-1.19c-1.18 0-1.55.73-1.55 1.47v1.76H18l-.38 2.88h-2.47v6.99A10.01 10.01 0 0022 12z"/></svg>
+      </a>
+      <a href="https://twitter.com/lingscars" target="_blank" class="text-white hover:text-blue-400" aria-label="Twitter">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.35 8.54 8.54 0 01-2.7 1.03 4.25 4.25 0 00-7.3 3.88A12.06 12.06 0 013 5.13a4.25 4.25 0 001.32 5.67 4.22 4.22 0 01-1.92-.53v.05a4.25 4.25 0 003.41 4.17 4.3 4.3 0 01-1.91.07 4.25 4.25 0 003.97 2.96A8.53 8.53 0 012 19.54a12.06 12.06 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.38-.02-.57A8.67 8.67 0 0022.46 6z"/></svg>
+      </a>
+      <a href="https://instagram.com/lingscars" target="_blank" class="text-white hover:text-pink-400" aria-label="Instagram">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.25 2.43.42a4.92 4.92 0 011.75 1.1 4.92 4.92 0 011.1 1.75c.17.46.364 1.26.42 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.25 1.97-.42 2.43a4.92 4.92 0 01-1.1 1.75 4.92 4.92 0 01-1.75 1.1c-.46.17-1.26.364-2.43.42-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.25-2.43-.42a4.92 4.92 0 01-1.75-1.1 4.92 4.92 0 01-1.1-1.75c-.17-.46-.364-1.26-.42-2.43C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.056-1.17.25-1.97.42-2.43a4.92 4.92 0 011.1-1.75 4.92 4.92 0 011.75-1.1c.46-.17 1.26-.364 2.43-.42C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.507.012-4.74.07-1.02.048-1.57.22-1.94.37a3.17 3.17 0 00-1.16.76 3.17 3.17 0 00-.76 1.16c-.15.37-.322.92-.37 1.94-.058 1.233-.07 1.6-.07 4.74s.012 3.507.07 4.74c.048 1.02.22 1.57.37 1.94.17.45.41.84.76 1.16.32.35.71.59 1.16.76.37.15.92.322 1.94.37 1.233.058 1.6.07 4.74.07s3.507-.012 4.74-.07c1.02-.048 1.57-.22 1.94-.37a3.17 3.17 0 001.16-.76 3.17 3.17 0 00.76-1.16c.15-.37.322-.92.37-1.94.058-1.233.07-1.6.07-4.74s-.012-3.507-.07-4.74c-.048-1.02-.22-1.57-.37-1.94a3.17 3.17 0 00-.76-1.16 3.17 3.17 0 00-1.16-.76c-.37-.15-.92-.322-1.94-.37-1.233-.058-1.6-.07-4.74-.07zm0 3.8a5.2 5.2 0 110 10.4 5.2 5.2 0 010-10.4zm0 1.8a3.4 3.4 0 100 6.8 3.4 3.4 0 000-6.8zm5.3-2.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+      </a>
+    </div>
+    <p class="text-sm">© 2025 LINGsCARS | All rights reserved.</p>
+    <p class="text-xs mt-2">This site is a professional redesign inspired by the bold and brilliant original at <a href="https://www.lingscars.com" class="underline text-blue-400">lingscars.com</a>.</p>
+  </div>
+</footer>
 </body>
 </html>
