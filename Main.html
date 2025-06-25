@@ -1,1414 +1,161 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <title>LINGsCARS.com: Car Leasing, Business &amp; Personal Deals </title>
-
-    <meta name="description" content="Lease a new car with LINGsCARS – the UK’s quirkiest, most fun car leasing site! &#128663;&#128168; No hidden fees, no hassle, just epic deals &amp; top customer service. Get started today!" />
-    <link href="/generated-less/182722.less?v=1" rel="stylesheet">
-
-    <link rel="shortcut icon" href="/media/0amflyer/favicon.ico" type="image/x-icon" />
-
-
-
-
-    <script type="text/javascript">
-        !(function(cfg) {
-            function e() {
-                cfg.onInit && cfg.onInit(n)
-            }
-            var x, w, D, t, E, n, C = window,
-                O = document,
-                b = C.location,
-                q = "script",
-                I = "ingestionendpoint",
-                L = "disableExceptionTracking",
-                j = "ai.device.";
-            "instrumentationKey" [x = "toLowerCase"](), w = "crossOrigin", D = "POST", t = "appInsightsSDK", E = cfg.name || "appInsights", (cfg.name || C[t]) && (C[t] = E), n = C[E] || function(g) {
-                var f = !1,
-                    m = !1,
-                    h = {
-                        initialize: !0,
-                        queue: [],
-                        sv: "8",
-                        version: 2,
-                        config: g
-                    };
-
-                function v(e, t) {
-                    var n = {},
-                        i = "Browser";
-
-                    function a(e) {
-                        e = "" + e;
-                        return 1 === e.length ? "0" + e : e
-                    }
-                    return n[j + "id"] = i[x](), n[j + "type"] = i, n["ai.operation.name"] = b && b.pathname || "_unknown_", n["ai.internal.sdkVersion"] = "javascript:snippet_" + (h.sv || h.version), {
-                        time: (i = new Date).getUTCFullYear() + "-" + a(1 + i.getUTCMonth()) + "-" + a(i.getUTCDate()) + "T" + a(i.getUTCHours()) + ":" + a(i.getUTCMinutes()) + ":" + a(i.getUTCSeconds()) + "." + (i.getUTCMilliseconds() / 1e3).toFixed(3).slice(2, 5) + "Z",
-                        iKey: e,
-                        name: "Microsoft.ApplicationInsights." + e.replace(/-/g, "") + "." + t,
-                        sampleRate: 100,
-                        tags: n,
-                        data: {
-                            baseData: {
-                                ver: 2
-                            }
-                        },
-                        ver: undefined,
-                        seq: "1",
-                        aiDataContract: undefined
-                    }
-                }
-                var n, i, t, a, y = -1,
-                    T = 0,
-                    S = ["js.monitor.azure.com", "js.cdn.applicationinsights.io", "js.cdn.monitor.azure.com", "js0.cdn.applicationinsights.io", "js0.cdn.monitor.azure.com", "js2.cdn.applicationinsights.io", "js2.cdn.monitor.azure.com", "az416426.vo.msecnd.net"],
-                    o = g.url || cfg.src,
-                    r = function() {
-                        return s(o, null)
-                    };
-
-                function s(d, t) {
-                    if ((n = navigator) && (~(n = (n.userAgent || "").toLowerCase()).indexOf("msie") || ~n.indexOf("trident/")) && ~d.indexOf("ai.3") && (d = d.replace(/(\/)(ai\.3\.)([^\d]*)$/, function(e, t, n) {
-                            return t + "ai.2" + n
-                        })), !1 !== cfg.cr)
-                        for (var e = 0; e < S.length; e++)
-                            if (0 < d.indexOf(S[e])) {
-                                y = e;
-                                break
-                            }
-                    var n, i = function(e) {
-                            var a, t, n, i, o, r, s, c, u, l;
-                            h.queue = [], m || (0 <= y && T + 1 < S.length ? (a = (y + T + 1) % S.length, p(d.replace(/^(.*\/\/)([\w\.]*)(\/.*)$/, function(e, t, n, i) {
-                                return t + S[a] + i
-                            })), T += 1) : (f = m = !0, s = d, !0 !== cfg.dle && (c = (t = function() {
-                                var e, t = {},
-                                    n = g.connectionString;
-                                if (n)
-                                    for (var i = n.split(";"), a = 0; a < i.length; a++) {
-                                        var o = i[a].split("=");
-                                        2 === o.length && (t[o[0][x]()] = o[1])
-                                    }
-                                return t[I] || (e = (n = t.endpointsuffix) ? t.location : null, t[I] = "https://" + (e ? e + "." : "") + "dc." + (n || "services.visualstudio.com")), t
-                            }()).instrumentationkey || g.instrumentationKey || "", t = (t = (t = t[I]) && "/" === t.slice(-1) ? t.slice(0, -1) : t) ? t + "/v2/track" : g.endpointUrl, t = g.userOverrideEndpointUrl || t, (n = []).push((i = "SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)", o = s, u = t, (l = (r = v(c, "Exception")).data).baseType = "ExceptionData", l.baseData.exceptions = [{
-                                typeName: "SDKLoadFailed",
-                                message: i.replace(/\./g, "-"),
-                                hasFullStack: !1,
-                                stack: i + "\nSnippet failed to load [" + o + "] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: " + (b && b.pathname || "_unknown_") + "\nEndpoint: " + u,
-                                parsedStack: []
-                            }], r)), n.push((l = s, i = t, (u = (o = v(c, "Message")).data).baseType = "MessageData", (r = u.baseData).message = 'AI (Internal): 99 message:"' + ("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) (" + l + ")").replace(/\"/g, "") + '"', r.properties = {
-                                endpoint: i
-                            }, o)), s = n, c = t, JSON && ((u = C.fetch) && !cfg.useXhr ? u(c, {
-                                method: D,
-                                body: JSON.stringify(s),
-                                mode: "cors"
-                            }) : XMLHttpRequest && ((l = new XMLHttpRequest).open(D, c), l.setRequestHeader("Content-type", "application/json"), l.send(JSON.stringify(s)))))))
-                        },
-                        a = function(e, t) {
-                            m || setTimeout(function() {
-                                !t && h.core || i()
-                            }, 500), f = !1
-                        },
-                        p = function(e) {
-                            var n = O.createElement(q),
-                                e = (n.src = e, t && (n.integrity = t), n.setAttribute("data-ai-name", E), cfg[w]);
-                            return !e && "" !== e || "undefined" == n[w] || (n[w] = e), n.onload = a, n.onerror = i, n.onreadystatechange = function(e, t) {
-                                "loaded" !== n.readyState && "complete" !== n.readyState || a(0, t)
-                            }, cfg.ld && cfg.ld < 0 ? O.getElementsByTagName("head")[0].appendChild(n) : setTimeout(function() {
-                                O.getElementsByTagName(q)[0].parentNode.appendChild(n)
-                            }, cfg.ld || 0), n
-                        };
-                    p(d)
-                }
-                cfg.sri && (n = o.match(/^((http[s]?:\/\/.*\/)\w+(\.\d+){1,5})\.(([\w]+\.){0,2}js)$/)) && 6 === n.length ? (d = "".concat(n[1], ".integrity.json"), i = "@".concat(n[4]), l = window.fetch, t = function(e) {
-                    if (!e.ext || !e.ext[i] || !e.ext[i].file) throw Error("Error Loading JSON response");
-                    var t = e.ext[i].integrity || null;
-                    s(o = n[2] + e.ext[i].file, t)
-                }, l && !cfg.useXhr ? l(d, {
-                    method: "GET",
-                    mode: "cors"
-                }).then(function(e) {
-                    return e.json()["catch"](function() {
-                        return {}
-                    })
-                }).then(t)["catch"](r) : XMLHttpRequest && ((a = new XMLHttpRequest).open("GET", d), a.onreadystatechange = function() {
-                    if (a.readyState === XMLHttpRequest.DONE)
-                        if (200 === a.status) try {
-                            t(JSON.parse(a.responseText))
-                        } catch (e) {
-                            r()
-                        } else r()
-                }, a.send())) : o && r();
-                try {
-                    h.cookie = O.cookie
-                } catch (k) {}
-
-                function e(e) {
-                    for (; e.length;) ! function(t) {
-                        h[t] = function() {
-                            var e = arguments;
-                            f || h.queue.push(function() {
-                                h[t].apply(h, e)
-                            })
-                        }
-                    }(e.pop())
-                }
-                var c, u, l = "track",
-                    d = "TrackPage",
-                    p = "TrackEvent",
-                    l = (e([l + "Event", l + "PageView", l + "Exception", l + "Trace", l + "DependencyData", l + "Metric", l + "PageViewPerformance", "start" + d, "stop" + d, "start" + p, "stop" + p, "addTelemetryInitializer", "setAuthenticatedUserContext", "clearAuthenticatedUserContext", "flush"]), h.SeverityLevel = {
-                        Verbose: 0,
-                        Information: 1,
-                        Warning: 2,
-                        Error: 3,
-                        Critical: 4
-                    }, (g.extensionConfig || {}).ApplicationInsightsAnalytics || {});
-                return !0 !== g[L] && !0 !== l[L] && (e(["_" + (c = "onerror")]), u = C[c], C[c] = function(e, t, n, i, a) {
-                    var o = u && u(e, t, n, i, a);
-                    return !0 !== o && h["_" + c]({
-                        message: e,
-                        url: t,
-                        lineNumber: n,
-                        columnNumber: i,
-                        error: a,
-                        evt: C.event
-                    }), o
-                }, g.autoExceptionInstrumented = !0), h
-            }(cfg.cfg), (C[E] = n).queue && 0 === n.queue.length ? (n.queue.push(e), n.trackPageView({})) : e();
-        })({
-            src: "https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js",
-            // name: "appInsights", // Global SDK Instance name defaults to "appInsights" when not supplied
-            // ld: 0, // Defines the load delay (in ms) before attempting to load the sdk. -1 = block page load and add to head. (default) = 0ms load after timeout,
-            // useXhr: 1, // Use XHR instead of fetch to report failures (if available),
-            // dle: true, // Prevent the SDK from reporting load failure log
-            crossOrigin: "anonymous", // When supplied this will add the provided value as the cross origin attribute on the script tag
-            // onInit: null, // Once the application insights instance has loaded and initialized this callback function will be called with 1 argument -- the sdk instance (DON'T ADD anything to the sdk.queue -- As they won't get called)
-            // sri: false, // Custom optional value to specify whether fetching the snippet from integrity file and do integrity check
-            cfg: { // Application Insights Configuration
-                connectionString: "InstrumentationKey=8e27eb80-420b-4be4-8024-910bdadc8418;IngestionEndpoint=https://uksouth-1.in.applicationinsights.azure.com/;LiveEndpoint=https://uksouth.livediagnostics.monitor.azure.com/;ApplicationId=824db6ec-c911-4c4e-84bb-a2b4b4d19302"
-            }
-        });
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179009136-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-179009136-1', {
-            'custom_map': {
-                'dimension1': 'manufacturer',
-                'dimension2': 'model',
-                'dimension3': 'derivative',
-                'dimension4': 'transmission',
-                'dimension5': 'doors',
-                'dimension6': 'bodystyle',
-                'dimension7': 'financeType',
-                'dimension8': 'initialRental',
-                'dimension9': 'contractLength',
-                'dimension10': 'annualMileage',
-                'dimension11': 'includeMaintenance'
-            }
-        });
-    </script>
-
-    <script>
-        window.motorleaseInit = window.motorleaseInit || {};
-        window.motorleaseInit.specialOfferLabel = 'Special offer';
-        window.motorleaseInit.poaLabel = 'POA';
-    </script>
-
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BE9XK6K22H">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-BE9XK6K22H');
-    </script>
-
-    <script type="text/javascript" src="https://api.feefo.com/api/javascript/lingscars-com-limited" async></script>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Car Leasing | Lease Your Dream Car</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .card-enter {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .card-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+  </style>
 </head>
-
-<body class="home">
-    <div class="wrapper">
-
-        <div id="sticky-header-sentinel">
-        </div>
-
-
-        <header role="banner" class="header" id="vue-app-header">
-
-            <div class="header__inner" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-
-                <nav class="header__nav">
-
-                    <a class="header__logo" href="/" itemprop="url">
-                    <img src="https://cms.motorcomplete.co.uk/media/ie5jgndz/lings-logo.png?width=400&quality=100&mode=max&scale=both" alt="Lings Cars" class="header__logo-img" itemprop="logo">
-
-                        <img src="https://cms.motorcomplete.co.uk/media/ie5jgndz/lings-logo.png?width=400&quality=100&mode=max&scale=both" alt="Lings Cars" class="header__logo-img-alt" itemprop="logo">
-                </a>
-
-                    <div class="navbar" id="main-menu">
-
-                        <div class="navbar__container">
-
-                            <ul class="navbar__list">
-                                <li class="navbar__item navbar__item--has-children">
-
-                                    <span class="navbar__link">Car leasing</span>
-                                    <ul class="navbar__child-list">
-                                        <li class="navbar__child-item">
-                                            <a href="/car-lease-deals/" class="navbar__child-link" target="_self">All car lease deals</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/hubs/personal-car-leasing/" class="navbar__child-link" target="_self">Personal Car Leasing</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/hubs/business-car-leasing/" class="navbar__child-link" target="_self">Business Car Leasing</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/hubs/poor-credit/" class="navbar__child-link" target="_self">Poor Credit Deals</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/hubs/12-month-deals/" class="navbar__child-link" target="_self">12 Month Deals</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="https://docs.google.com/spreadsheets/d/1VKNHrQgBBGl_9c5rYO1_coKbjFYAIXm26njaFQrGTBw/edit?gid=0#gid=0" class="navbar__child-link" target="_blank">Poor Credit 3-4 Year Deals</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="navbar__item navbar__item--has-children">
-
-                                    <span class="navbar__link">Van leasing</span>
-                                    <ul class="navbar__child-list">
-                                        <li class="navbar__child-item">
-                                            <a href="/van-lease-deals/" class="navbar__child-link" target="_self">All van lease deals</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="navbar__item navbar__item--has-children">
-
-                                    <span class="navbar__link">Manufacturers</span>
-                                    <ul class="navbar__child-list">
-                                        <li class="navbar__child-item">
-                                            <a href="/audi-car-lease-deals/" class="navbar__child-link" target="_self">Audi</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/bmw-car-lease-deals/" class="navbar__child-link" target="_self">BMW</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/volkswagen-car-lease-deals/" class="navbar__child-link" target="_self">Volkswagen</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/skoda-car-lease-deals/" class="navbar__child-link" target="_self">Skoda</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/renault-car-lease-deals/" class="navbar__child-link" target="_self">Renault</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="/car-manufacturers/" class="navbar__child-link" target="_self">More Car Manufacturers</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="navbar__item navbar__item--has-children">
-
-                                    <span class="navbar__link">About us</span>
-                                    <ul class="navbar__child-list">
-                                        <li class="navbar__child-item">
-                                            <a href="/about-us/" class="navbar__child-link" target="_self">About us</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="https://museum.lingscars.com/staff" class="navbar__child-link" target="_blank">Meet the team</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="https://uk.trustpilot.com/review/lingscars.com" class="navbar__child-link" target="_blank">Trustpilot Reviews</a>
-                                        </li>
-                                        <li class="navbar__child-item">
-                                            <a href="https://museum.lingscars.com/faq" class="navbar__child-link" target="_self">FAQ&#39;S</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="navbar__item ">
-
-                                    <a href="https://museum.lingscars.com" class="navbar__link" target="_blank">Museum</a>
-                                </li>
-                                <li class="navbar__item ">
-
-                                    <a href="https://customer.lingscars.com/lingo" class="navbar__link" target="_blank">Your Account</a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <modal-drawer modal-class="modal-drawer--nav" v-bind:is-open="showNavModal" v-on:close="showNavModal = false" v-cloak>
-                        <div slot="body">
-
-                            <nav class="modal-menu">
-                                <ul class="modal-menu__list">
-
-                                    <li class="modal-menu__item">
-
-                                        <div class="modal-menu-contact">
-                                            <p class="modal-menu-contact__phone">
-                                                <svg class="modal-menu-contact__phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" /></svg>
-                                                <a href="tel:0191 460 9444" itemprop="telephone">0191 460 9444</a>
-                                            </p>
-                                            <p class="modal-menu-contact__cta">
-                                                <a href="/contact/">Click to email me</a>
-                                            </p>
-                                        </div>
-
-                                    </li>
-
-                                    <li class="modal-menu__item modal-menu__item--has-children">
-
-                                        <Expandable-Modal-Facet title="Car leasing" class="expandable-modal-facet--no-pad">
-                                            <ul class="modal-menu__list">
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/car-lease-deals/" class="modal-menu__link" target="_self">All car lease deals</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/hubs/personal-car-leasing/" class="modal-menu__link" target="_self">Personal Car Leasing</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/hubs/business-car-leasing/" class="modal-menu__link" target="_self">Business Car Leasing</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/hubs/poor-credit/" class="modal-menu__link" target="_self">Poor Credit Deals</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/hubs/12-month-deals/" class="modal-menu__link" target="_self">12 Month Deals</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="https://docs.google.com/spreadsheets/d/1VKNHrQgBBGl_9c5rYO1_coKbjFYAIXm26njaFQrGTBw/edit?gid=0#gid=0" class="modal-menu__link" target="_self">Poor Credit 3-4 Year Deals</a></li>
-                                            </ul>
-                                        </Expandable-Modal-Facet>
-
-                                    </li>
-                                    <li class="modal-menu__item modal-menu__item--has-children">
-
-                                        <Expandable-Modal-Facet title="Van leasing" class="expandable-modal-facet--no-pad">
-                                            <ul class="modal-menu__list">
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/van-lease-deals/" class="modal-menu__link" target="_self">All van lease deals</a></li>
-                                            </ul>
-                                        </Expandable-Modal-Facet>
-
-                                    </li>
-                                    <li class="modal-menu__item modal-menu__item--has-children">
-
-                                        <Expandable-Modal-Facet title="Manufacturers" class="expandable-modal-facet--no-pad">
-                                            <ul class="modal-menu__list">
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/audi-car-lease-deals/" class="modal-menu__link" target="_self">Audi</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/bmw-car-lease-deals/" class="modal-menu__link" target="_self">BMW</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/volkswagen-car-lease-deals/" class="modal-menu__link" target="_self">Volkswagen</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/skoda-car-lease-deals/" class="modal-menu__link" target="_self">Skoda</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/renault-car-lease-deals/" class="modal-menu__link" target="_self">Renault</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/car-manufacturers/" class="modal-menu__link" target="_self">More Car Manufacturers</a></li>
-                                            </ul>
-                                        </Expandable-Modal-Facet>
-
-                                    </li>
-                                    <li class="modal-menu__item modal-menu__item--has-children">
-
-                                        <Expandable-Modal-Facet title="About us" class="expandable-modal-facet--no-pad">
-                                            <ul class="modal-menu__list">
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="/about-us/" class="modal-menu__link" target="_self">About us</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="https://museum.lingscars.com/staff" class="modal-menu__link" target="_self">Meet the team</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="https://uk.trustpilot.com/review/lingscars.com" class="modal-menu__link" target="_self">Trustpilot Reviews</a></li>
-                                                <li class="modal-menu__item modal-menu__item--child"><a href="https://museum.lingscars.com/faq" class="modal-menu__link" target="_self">FAQ&#39;S</a></li>
-                                            </ul>
-                                        </Expandable-Modal-Facet>
-
-                                    </li>
-                                    <li class="modal-menu__item ">
-
-                                        <a href="https://museum.lingscars.com" class="modal-menu__link" target="_blank">Museum</a>
-
-                                    </li>
-                                    <li class="modal-menu__item ">
-
-                                        <a href="https://customer.lingscars.com/lingo" class="modal-menu__link" target="_blank">Your Account</a>
-
-                                    </li>
-                                </ul>
-                            </nav>
-
-                        </div>
-                    </modal-drawer>
-
-                </nav>
-
-                <div class="header__right">
-
-                    <div class="header__contact">
-                        <p class="header__contact-phone">
-                            <a href="tel:0191 460 9444" itemprop="telephone">
-                        <svg class="header__contact-phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" /></svg>
-                        <span class="header__contact-phone-number">0191 460 9444</span>
-                    </a>
-                        </p>
-                        <p class="header__cta">
-                            <a href="/contact/">Click to email me</a>
-                        </p>
-                    </div>
-
-
-
-                    <button class="header__nav-open" v-bind:aria-expanded="showNavModal" v-bind:class="{'is-active' : showNavModal}" aria-controls="main-menu" aria-label="Menu" v-on:click.prevent="showNavModal = !showNavModal">
-                <svg class="header__nav-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" /></svg>
-            </button>
-
-                </div>
-
-            </div>
-
-
-        </header>
-
-
-        <script>
-            window.motorleaseInit = window.motorleaseInit || {};
-            window.motorleaseInit.isHomepage = true;
-            window.motorleaseInit.specialOfferLabel = 'Special offer';
-            window.motorleaseInit.showCars = true;
-            window.motorleaseInit.showVans = true;
-            window.motorleaseInit.showBusiness = true;
-            window.motorleaseInit.showPersonal = true;
-            window.motorleaseInit.defaultLeaseType = 'Personal';
-            window.motorleaseInit.defaultVanLeaseType = 'Business';
-            window.motorleaseInit.defaultVehicleType = 'Cars';
-            window.motorleaseInit.showBodyStyleInHomepageSearch = true;
-        </script>
-
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "Organization",
-                "name": "Lings Cars",
-                "legalName": "Lings Cars",
-                "url": "www.lingscars.com",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "15 Riverside Studios, Newcastle Business Park",
-                    "addressLocality": "Newcastle Upon Tyne",
-                    "addressRegion": "",
-                    "postalCode": "NE4 7YL",
-                    "addressCountry": "United Kingdom"
-                },
-                "contactPoint": [{
-                    "@type": "ContactPoint",
-                    "telephone": "0191 460 9444",
-                    "email": "sales@lingscars.com",
-                    "contactType": "Customer Support"
-                }],
-                "logo": "https://cms.motorcomplete.co.uk/media/1dtiojwj/lings-logo.png",
-                "sameAs": ["https://www.facebook.com/lingscars",
-                    "https://www.linkedin.com/company/lingscars-com",
-                    "https://www.instagram.com/lings_cars/",
-                    "https://x.com/LINGsCARS",
-                    "https://www.youtube.com/@LINGsCARS"
-                ]
-            }
-        </script>
-
-        <div id="vue-app-home">
-
-
-            <div class="hero hero--home ">
-
-
-
-                <div class="hero__container">
-
-                    <div class="block-area block-area--hero block-area--inline">
-
-                        <div class="search-with-image ">
-                            <div class="search-with-image__row">
-                                <div class="search-with-image__image-col">
-
-                                    <Slideshow>
-                                        <div class="swiper-wrapper">
-                                            <a href="https://www.lingscars.com/volkswagen-car-lease-deals/personal/t-roc/suv-1-5-tsi-r-line-5dr-dsg/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/dcgffe5y/plain-21.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/dcgffe5y/plain-21.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Volkswagen T-Roc R-Line Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/omoda-car-lease-deals/personal/5/suv-150kw-noble-61kwh-5dr-auto/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/eddbbxzw/plain-2025-06-06t113016-636.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/eddbbxzw/plain-2025-06-06t113016-636.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Omoda 5 Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/volkswagen-car-lease-deals/personal/t-roc/suv-1-0-tsi-115-match-5dr/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/oedfc4ob/plain-8.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/oedfc4ob/plain-8.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Volkswagen T-Roc Match Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/hyundai-car-lease-deals/personal/i10/hatchback-1-0-63-advance-5dr-auto-nav/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/sjddmkfq/plain-2025-06-06t125927-477.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/sjddmkfq/plain-2025-06-06t125927-477.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Hyundai i10 Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/mg-motor-uk-car-lease-deals/personal/hs/suv-1-5-t-gdi-trophy-5dr/?tags=Delivery%20within%204%20weeks" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/u1xndolq/plain-2025-06-06t132912-337.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/u1xndolq/plain-2025-06-06t132912-337.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="MG HS Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/volkswagen-car-lease-deals/personal/touareg/suv-3-0-v6-tsi-ehybrid-4motion-r-5dr-tip-auto/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/ydycl3sr/plain-2025-06-06t150403-289.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/ydycl3sr/plain-2025-06-06t150403-289.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Volkswagen Touareg Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/omoda-car-lease-deals/personal/9/suv-1-5t-shs-noble-5dr-3dht/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/kfsjwiiu/plain-2025-05-30t171222-765.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/kfsjwiiu/plain-2025-05-30t171222-765.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Omoda 9 Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                            <a href="https://www.lingscars.com/peugeot-car-lease-deals/personal/208/hatchback-1-2-puretech-100-gt-5dr/" target="_self" class="slideshow__item  swiper-slide">
-                                                <div class="slideshow__item-desktop">
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/wrgliugn/plain-2025-06-06t134805-214.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/wrgliugn/plain-2025-06-06t134805-214.png?width=1600&quality=90&mode=min&scale=both&center=0,0&format=webp" alt="Peugeot 208 Headline Deal" loading="lazy" itemprop="image">
-                                                    </picture>
-                                                </div>
-
-
-                                            </a>
-                                        </div>
-                                        <button class="search-with-image__prev swiper-button-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="search-with-image__prev-icon"><path d="M25.1 247.5l117.8-116c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L64.7 256l102.2 100.4c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L25 264.5c-4.6-4.7-4.6-12.3.1-17z"></path></svg>
-                    </button>
-                                        <button class="search-with-image__next swiper-button-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" class="search-with-image__next-icon"><path d="M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"></path></svg>
-                    </button>
-                                        <div class="swiper-pagination"></div>
-                                    </Slideshow>
-
-
-                                </div>
-                                <div class="search-with-image__search">
-
-                                    <Hero-Search v-bind:is-vertical="true" v-bind:hide-manufacturers="false" car-tab-url-override="" van-tab-url-override="" car-url-override="" van-url-override="" car-tab-text="I want a car" van-tab-text="I want a van" lease-type-override="" vehicle-type-override=""
-                                        form-style=""></Hero-Search>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="block-area">
-
-
-                <div class="block-area__item block-area__item--pages-picker block-area__item--bg-tertiary block-area__item--has-bg " style="">
-                    <div class="block-area__container">
-
-                        <div class="grid grid--double-gutters grid--row-gap">
-                            <div class="grid__col grid__col--sm-6 grid__col--md-4">
-                                <div class="article-card">
-                                    <a class="article-card__link" href="/hubs/electric/">
-
-                                        <div class="article-card__img-wrapper">
-                                            <picture>
-                                                <source media="(max-width: 415px)" srcset="https://cms.motorcomplete.co.uk/media/ty5ia4x3/ling-s-electric-deals.png?width=374&height=211&quality=80&mode=crop&scale=both&center=0,0&format=webp 1x, https://cms.motorcomplete.co.uk/media/ty5ia4x3/ling-s-electric-deals.png?width=748&height=421&quality=80&mode=crop&scale=both&center=0,0&format=webp 2x"
-                                                    type="image/webp">
-                                                <source srcset="https://cms.motorcomplete.co.uk/media/ty5ia4x3/ling-s-electric-deals.png?width=520&height=293&quality=80&mode=crop&scale=both&center=0,0&format=webp 1x, https://cms.motorcomplete.co.uk/media/ty5ia4x3/ling-s-electric-deals.png?width=1040&height=586&quality=80&mode=crop&scale=both&center=0,0&format=webp 2x"
-                                                    type="image/webp">
-                                                <img src="https://cms.motorcomplete.co.uk/media/ty5ia4x3/ling-s-electric-deals.png?width=520&height=293&quality=80&mode=crop&scale=both&center=0,0&format=webp" alt="Electric" loading="lazy" itemprop="image" class="article-card__img">
-                                            </picture>
-                                        </div>
-                                        <div class="article-card__summary">
-                                            <h3 class="article-card__title">Electric</h3>
-                                            <p class="article-card__excerpt">Switch to electric car leasing and enjoy zero emissions, lower costs, and instant power! ⚡ Say goodbye to petrol, diesel, and high maintenance—EVs have fewer moving parts, meaning less hassle and m...</p>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-
-                            </div>
-                            <div class="grid__col grid__col--sm-6 grid__col--md-4">
-                                <div class="article-card">
-                                    <a class="article-card__link" href="/hubs/in-stock/">
-
-                                        <div class="article-card__img-wrapper">
-                                            <picture>
-                                                <source media="(max-width: 415px)" srcset="https://cms.motorcomplete.co.uk/media/1zkhmjcu/ling-s-electric-deals-1.png?width=374&height=211&quality=80&mode=crop&scale=both&center=0,0&format=webp 1x, https://cms.motorcomplete.co.uk/media/1zkhmjcu/ling-s-electric-deals-1.png?width=748&height=421&quality=80&mode=crop&scale=both&center=0,0&format=webp 2x"
-                                                    type="image/webp">
-                                                <source srcset="https://cms.motorcomplete.co.uk/media/1zkhmjcu/ling-s-electric-deals-1.png?width=520&height=293&quality=80&mode=crop&scale=both&center=0,0&format=webp 1x, https://cms.motorcomplete.co.uk/media/1zkhmjcu/ling-s-electric-deals-1.png?width=1040&height=586&quality=80&mode=crop&scale=both&center=0,0&format=webp 2x"
-                                                    type="image/webp">
-                                                <img src="https://cms.motorcomplete.co.uk/media/1zkhmjcu/ling-s-electric-deals-1.png?width=520&height=293&quality=80&mode=crop&scale=both&center=0,0&format=webp" alt="In Stock" loading="lazy" itemprop="image" class="article-card__img">
-                                            </picture>
-                                        </div>
-                                        <div class="article-card__summary">
-                                            <h3 class="article-card__title">In Stock</h3>
-                                            <p class="article-card__excerpt">WANNA LEASE FAST? ⏩ Our best deals are on in-stock cars, ready to roll! These beauties are already ordered, factory-confirmed, and just WAITING for you. No endless waits—most arrive in 4 to 12 week...</p>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-
-                            </div>
-                            <div class="grid__col grid__col--sm-6 grid__col--md-4">
-                                <div class="article-card">
-                                    <a class="article-card__link" href="/hubs/special-offers/">
-
-                                        <div class="article-card__img-wrapper">
-                                            <picture>
-                                                <source media="(max-width: 415px)" srcset="https://cms.motorcomplete.co.uk/media/dgebyjvy/ling-s-electric-deals-2.png?width=374&height=211&quality=80&mode=crop&scale=both&center=0,0&format=webp 1x, https://cms.motorcomplete.co.uk/media/dgebyjvy/ling-s-electric-deals-2.png?width=748&height=421&quality=80&mode=crop&scale=both&center=0,0&format=webp 2x"
-                                                    type="image/webp">
-                                                <source srcset="https://cms.motorcomplete.co.uk/media/dgebyjvy/ling-s-electric-deals-2.png?width=520&height=293&quality=80&mode=crop&scale=both&center=0,0&format=webp 1x, https://cms.motorcomplete.co.uk/media/dgebyjvy/ling-s-electric-deals-2.png?width=1040&height=586&quality=80&mode=crop&scale=both&center=0,0&format=webp 2x"
-                                                    type="image/webp">
-                                                <img src="https://cms.motorcomplete.co.uk/media/dgebyjvy/ling-s-electric-deals-2.png?width=520&height=293&quality=80&mode=crop&scale=both&center=0,0&format=webp" alt="Special Offers" loading="lazy" itemprop="image" class="article-card__img">
-                                            </picture>
-                                        </div>
-                                        <div class="article-card__summary">
-                                            <h3 class="article-card__title">Special Offers</h3>
-                                            <p class="article-card__excerpt">At LINGsCARS, we’re OBSESSED with bringing you the BEST car lease deals! Whether it’s for business, personal use, or just to look fancy, we’ve got you covered. Our expert team sorts the boring stuf...</p>
-
-                                        </div>
-                                    </a>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <Recently-Viewed-Offers heading="Your Recently Viewed Deals" client-theme="Modern" style="" class="block-area__item block-area__item--recently-viewed " v-bind:car-and-driving-images="false" v-bind:cvd-images="true"></Recently-Viewed-Offers>
-
-
-                <div class="block-area__item block-area__item--manufacturers block-area__item--small " style="">
-                    <div class="block-area__container">
-
-                        <div class="make-logo-panel" id="makeLogoPanel">
-                            <div class="make-logo-panel__row">
-                                <div class="make-logo-panel__headings">
-                                    <h2 class="make-logo-panel__heading">Browse by brand</h2>
-                                    <h3 class="make-logo-panel__subheading">Pick a brand to see our best deals.</h3>
-
-                                </div>
-                                <div class="make-logo-panel__logos">
-                                    <Make-Logo-Grid cdn-url="https://cms.motorcomplete.co.uk">
-                                        <div class="logo-grid">
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/abarth-car-lease-deals/" title="Abarth">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1007/abarth.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1007/abarth.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1007/abarth.jpg?width=150&format=webp" class="logo-grid__img" alt="Abarth" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Abarth</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/alfa-romeo-car-lease-deals/" title="Alfa Romeo">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1008/alfa-romeo.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1008/alfa-romeo.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1008/alfa-romeo.jpg?width=150&format=webp" class="logo-grid__img" alt="Alfa Romeo" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Alfa Romeo</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/alpine-car-lease-deals/" title="Alpine">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1010/alpine.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1010/alpine.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1010/alpine.jpg?width=150&format=webp" class="logo-grid__img" alt="Alpine" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Alpine</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/audi-car-lease-deals/" title="Audi">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1012/audi.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1012/audi.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1012/audi.jpg?width=150&format=webp" class="logo-grid__img" alt="Audi" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Audi</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/bmw-car-lease-deals/" title="BMW">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1014/bmw.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1014/bmw.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1014/bmw.jpg?width=150&format=webp" class="logo-grid__img" alt="BMW" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">BMW</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/bmw-alpina-car-lease-deals/" title="BMW Alpina">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1009/alpina.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1009/alpina.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1009/alpina.jpg?width=150&format=webp" class="logo-grid__img" alt="BMW Alpina" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">BMW Alpina</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/byd-car-lease-deals/" title="BYD">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/i1nkchnv/byd.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/i1nkchnv/byd.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/i1nkchnv/byd.png?width=150&format=webp" class="logo-grid__img" alt="BYD" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">BYD</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/citroen-car-lease-deals/" title="Citroen">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1016/citroen.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1016/citroen.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1016/citroen.jpg?width=150&format=webp" class="logo-grid__img" alt="Citroen" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Citroen</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/cupra-car-lease-deals/" title="Cupra">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/sghne1ol/cupra.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/sghne1ol/cupra.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/sghne1ol/cupra.png?width=150&format=webp" class="logo-grid__img" alt="Cupra" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Cupra</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/dacia-car-lease-deals/" title="Dacia">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/oevk5hvb/dacia.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/oevk5hvb/dacia.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/oevk5hvb/dacia.png?width=150&format=webp" class="logo-grid__img" alt="Dacia" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Dacia</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/ds-car-lease-deals/" title="DS">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1018/ds.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1018/ds.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1018/ds.jpg?width=150&format=webp" class="logo-grid__img" alt="DS" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">DS</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/fiat-car-lease-deals/" title="Fiat">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1020/fiat.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1020/fiat.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1020/fiat.jpg?width=150&format=webp" class="logo-grid__img" alt="Fiat" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Fiat</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/ford-car-lease-deals/" title="Ford">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/ylcoisfg/ford.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/ylcoisfg/ford.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/ylcoisfg/ford.png?width=150&format=webp" class="logo-grid__img" alt="Ford" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Ford</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/genesis-car-lease-deals/" title="Genesis">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/5r3nts4j/genesis.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/5r3nts4j/genesis.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/5r3nts4j/genesis.png?width=150&format=webp" class="logo-grid__img" alt="Genesis" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Genesis</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/gwm-car-lease-deals/" title="GWM">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/kbyn5chm/gwm.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/kbyn5chm/gwm.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/kbyn5chm/gwm.png?width=150&format=webp" class="logo-grid__img" alt="GWM" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">GWM</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/gwm-ora-car-lease-deals/" title="GWM ORA">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/x05poama/ora-gwm.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/x05poama/ora-gwm.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/x05poama/ora-gwm.png?width=150&format=webp" class="logo-grid__img" alt="GWM ORA" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">GWM ORA</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/honda-car-lease-deals/" title="Honda">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1022/honda.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1022/honda.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1022/honda.jpg?width=150&format=webp" class="logo-grid__img" alt="Honda" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Honda</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/hyundai-car-lease-deals/" title="Hyundai">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/obfnpvqs/hyundai.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/obfnpvqs/hyundai.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/obfnpvqs/hyundai.png?width=150&format=webp" class="logo-grid__img" alt="Hyundai" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Hyundai</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/jaecoo-car-lease-deals/" title="Jaecoo">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/kgkbelgm/jaecoo.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/kgkbelgm/jaecoo.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/kgkbelgm/jaecoo.png?width=150&format=webp" class="logo-grid__img" alt="Jaecoo" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Jaecoo</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/jeep-car-lease-deals/" title="Jeep">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1026/jeep.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1026/jeep.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1026/jeep.jpg?width=150&format=webp" class="logo-grid__img" alt="Jeep" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Jeep</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/kgm-car-lease-deals/" title="KGM">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/10bmqao3/kgm.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/10bmqao3/kgm.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/10bmqao3/kgm.png?width=150&format=webp" class="logo-grid__img" alt="KGM" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">KGM</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/kia-car-lease-deals/" title="Kia">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/iiek03ts/dfe9f88f0058b604891776e8ce96621b46ce869c.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/iiek03ts/dfe9f88f0058b604891776e8ce96621b46ce869c.png?width=300&format=webp 2x"
-                                                            type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/iiek03ts/dfe9f88f0058b604891776e8ce96621b46ce869c.png?width=150&format=webp" class="logo-grid__img" alt="Kia" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Kia</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/land-rover-car-lease-deals/" title="Land Rover">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1029/land-rover.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1029/land-rover.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1029/land-rover.jpg?width=150&format=webp" class="logo-grid__img" alt="Land Rover" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Land Rover</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/leapmotor-car-lease-deals/" title="LEAPMOTOR">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/f0vh2kkf/leapmotor.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/f0vh2kkf/leapmotor.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/f0vh2kkf/leapmotor.png?width=150&format=webp" class="logo-grid__img" alt="LEAPMOTOR" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">LEAPMOTOR</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/lexus-car-lease-deals/" title="Lexus">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1031/lexus.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1031/lexus.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1031/lexus.jpg?width=150&format=webp" class="logo-grid__img" alt="Lexus" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Lexus</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/lotus-car-lease-deals/" title="Lotus">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1032/lotus.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1032/lotus.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1032/lotus.jpg?width=150&format=webp" class="logo-grid__img" alt="Lotus" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Lotus</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/maxus-car-lease-deals/" title="Maxus">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/qfnjzuhv/maxus.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/qfnjzuhv/maxus.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/qfnjzuhv/maxus.jpg?width=150&format=webp" class="logo-grid__img" alt="Maxus" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Maxus</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/mazda-car-lease-deals/" title="Mazda">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1036/mazda.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1036/mazda.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1036/mazda.jpg?width=150&format=webp" class="logo-grid__img" alt="Mazda" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Mazda</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/mercedes-benz-car-lease-deals/" title="Mercedes-Benz">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1038/mercedes.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1038/mercedes.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1038/mercedes.jpg?width=150&format=webp" class="logo-grid__img" alt="Mercedes-Benz" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Mercedes-Benz</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/mg-motor-uk-car-lease-deals/" title="MG Motor UK">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/sbbpdrjz/mg.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/sbbpdrjz/mg.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/sbbpdrjz/mg.png?width=150&format=webp" class="logo-grid__img" alt="MG Motor UK" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">MG Motor UK</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/mini-car-lease-deals/" title="MINI">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1041/mini.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1041/mini.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1041/mini.jpg?width=150&format=webp" class="logo-grid__img" alt="MINI" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">MINI</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/nissan-car-lease-deals/" title="Nissan">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/ae5bo2yc/nissan.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/ae5bo2yc/nissan.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/ae5bo2yc/nissan.png?width=150&format=webp" class="logo-grid__img" alt="Nissan" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Nissan</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/omoda-car-lease-deals/" title="Omoda">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/q0rjh1aj/omoda.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/q0rjh1aj/omoda.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/q0rjh1aj/omoda.png?width=150&format=webp" class="logo-grid__img" alt="Omoda" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Omoda</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/peugeot-car-lease-deals/" title="Peugeot">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1045/peugeot.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1045/peugeot.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1045/peugeot.jpg?width=150&format=webp" class="logo-grid__img" alt="Peugeot" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Peugeot</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/polestar-car-lease-deals/" title="Polestar">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/tnegmidb/polestar.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/tnegmidb/polestar.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/tnegmidb/polestar.png?width=150&format=webp" class="logo-grid__img" alt="Polestar" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Polestar</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/porsche-car-lease-deals/" title="Porsche">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1046/porsche.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1046/porsche.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1046/porsche.jpg?width=150&format=webp" class="logo-grid__img" alt="Porsche" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Porsche</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/renault-car-lease-deals/" title="Renault">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/0iqabjji/renault.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/0iqabjji/renault.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/0iqabjji/renault.png?width=150&format=webp" class="logo-grid__img" alt="Renault" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Renault</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/seat-car-lease-deals/" title="SEAT">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1049/seat.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1049/seat.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1049/seat.jpg?width=150&format=webp" class="logo-grid__img" alt="SEAT" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">SEAT</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/skoda-car-lease-deals/" title="Skoda">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1050/skoda.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1050/skoda.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1050/skoda.jpg?width=150&format=webp" class="logo-grid__img" alt="Skoda" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Skoda</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/suzuki-car-lease-deals/" title="Suzuki">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1054/suzuki.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1054/suzuki.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1054/suzuki.jpg?width=150&format=webp" class="logo-grid__img" alt="Suzuki" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Suzuki</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/tesla-car-lease-deals/" title="Tesla">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1055/tesla.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1055/tesla.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1055/tesla.jpg?width=150&format=webp" class="logo-grid__img" alt="Tesla" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Tesla</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/toyota-car-lease-deals/" title="Toyota">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1056/toyota.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1056/toyota.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1056/toyota.jpg?width=150&format=webp" class="logo-grid__img" alt="Toyota" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Toyota</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/vauxhall-car-lease-deals/" title="Vauxhall">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/2oql3shi/vauxhall.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/2oql3shi/vauxhall.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/2oql3shi/vauxhall.png?width=150&format=webp" class="logo-grid__img" alt="Vauxhall" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Vauxhall</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/volkswagen-car-lease-deals/" title="Volkswagen">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/1058/volkswagen.jpg?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/1058/volkswagen.jpg?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/1058/volkswagen.jpg?width=150&format=webp" class="logo-grid__img" alt="Volkswagen" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Volkswagen</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/volvo-car-lease-deals/" title="Volvo">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/0tlnff2c/volvo.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/0tlnff2c/volvo.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/0tlnff2c/volvo.png?width=150&format=webp" class="logo-grid__img" alt="Volvo" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">Volvo</p>
-                                                </a>
-                                            </div>
-                                            <div class="logo-grid__item">
-                                                <a class="logo-grid__link" href="/xpeng-car-lease-deals/" title="XPENG">
-
-                                                    <picture>
-                                                        <source srcset="https://cms.motorcomplete.co.uk/media/qwdl01bb/xpeng.png?width=150&format=webp 1x, https://cms.motorcomplete.co.uk/media/qwdl01bb/xpeng.png?width=300&format=webp 2x" type="image/webp">
-                                                        <img src="https://cms.motorcomplete.co.uk/media/qwdl01bb/xpeng.png?width=150&format=webp" class="logo-grid__img" alt="XPENG" loading="lazy">
-                                                    </picture>
-
-                                                    <p class="logo-grid__label">XPENG</p>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </Make-Logo-Grid>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="block-area__item block-area__item--html " style="">
-                    <div class="block-area__container">
-                        <div id="feefo-service-review-widgetId" class="feefo-review-widget-service"></div>
-
-                        <div id="feefo-service-review-floating-widgetId"></div>
-                    </div>
-                </div>
-
-
-                <div class="block-area__item block-area__item--partners " style="">
-                    <div class="block-area__container">
-                        <div class="trusted-partners">
-                            <ul class="trusted-partners__row">
-                                <li class="trusted-partners__item">
-
-                                    <picture>
-                                        <source srcset="https://cms.motorcomplete.co.uk/media/vb5fajjo/group-7.png?&amp;height=200&amp;quality=90&amp;mode=crop&amp;scale=both&amp;center=0,0&format=webp" type="image/webp">
-                                        <img src="https://cms.motorcomplete.co.uk/media/vb5fajjo/group-7.png?&amp;height=200&amp;quality=90&amp;mode=crop&amp;scale=both&amp;center=0,0&format=webp" class="trusted-partners__img" alt="BVRLA" loading="lazy" itemprop="image">
-                                    </picture>
-
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <footer class="footer" id="vue-app-footer">
-
-
-            <div class="footer__inner">
-
-                <div class="footer__row">
-                    <div class="footer__contact">
-                        <h4 class="footer__contact-heading">Contact us</h4>
-
-                        <p class="footer__contact-phone"><a href="tel:0191 460 9444" class="footer__contact-phone-link">0191 460 9444</a></p>
-                        <p class="footer__contact-times">Mon-Fri 9am-5:30pm</p>
-
-
-
-
-                        <p class="footer__contact-email"><a class="footer__contact-email-link" href="mailto:sales@lingscars.com">sales@lingscars.com</a></p>
-
-                        <div class="footer__social">
-                            <ul class="social social--currentcolor">
-
-                                <li class="social__item">
-                                    <a class="social__link" href="https://www.facebook.com/lingscars" target="_blank" rel="noreferrer" name="Facebook" title="Facebook" aria-label="Facebook">
-                                        <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229" /></svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a class="social__link" href="https://x.com/LINGsCARS" target="_blank" rel="noreferrer" name="Twitter" title="Twitter" aria-label="Twitter">
-                                        <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" /></svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a class="social__link" href="https://www.instagram.com/lings_cars/" target="_blank" rel="noreferrer" name="Instagram" title="Instagram" aria-label="Instagram">
-                                        <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" /></svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a class="social__link" href="https://www.linkedin.com/company/lingscars-com" target="_blank" rel="noreferrer" name="LinkedIn" title="LinkedIn" aria-label="LinkedIn">
-                                        <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
-                                    </a>
-                                </li>
-                                <li class="social__item">
-                                    <a class="social__link" href="https://www.youtube.com/@LINGsCARS" target="_blank" rel="noreferrer" name="YouTube" title="YouTube" aria-label="YouTube">
-                                        <svg class="social__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" /></svg>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <nav class="footer__nav">
-                        <h4 class="footer__nav-heading">Legal &amp; Compliance</h4>
-                        <ul class="footer__nav-list">
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="#" target="_blank">Code of Conduct</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/cookie-policy/" target="_blank">Cookie Policy</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/information-notice/" target="_blank">Information Notice</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/vulnerable-persons-policy/" target="_blank">Vulnerable Persons Policy</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/initial-disclosure-document/" target="_blank">Initial Disclosure Document</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/terms-conditions/" target="_blank">Terms &amp; Conditions</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/treat-customers-fairly/" target="_blank">Treat Customers Fairly</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/complaints-policy/" target="_blank">Complaints Policy</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/privacy-policy/" target="_blank">Privacy Policy</a></li>
-                        </ul>
-
-                    </nav>
-                    <nav class="footer__nav">
-                        <h4 class="footer__nav-heading">Quick Links</h4>
-                        <ul class="footer__nav-list">
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="car-lease-deals/">All Car leasing Deals</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="footer__nav">
-                        <h4 class="footer__nav-heading">Information</h4>
-                        <ul class="footer__nav-list">
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/about-us/">About Us</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="/meet-the-team/">Meet The Team</a></li>
-                            <li class="footer__nav-item"><a class="footer__nav-link" href="https://www.lingscars.com/faq">FAQ&#39;s</a></li>
-                        </ul>
-                    </nav>
-
-
-
-
-
-                </div>
-            </div>
-            <div class="footer__legal">
-                <div class="footer__legal-inner">
-
-                    <p class="footer__legal-p">LINGsCARS.com Limited is registered in England and Wales under company number: 06178634 [15 Riverside Studios Amethyst Road, Newcastle Business Park, Newcastle Upon Tyne, Tyne And Wear, NE4 7YL] LINGsCARS.com Limited is authorised
-                        and regulated by the Financial Conduct Authority, under FCA number: 721481. We act as a credit broker not a lender. We work with a number of carefully selected credit providers who may be able to offer you finance for your purchase.
-                        (Written Quotation available upon request). Whichever lender we introduce you to, we will typically receive commission from them (either a fixed fee or a fixed percentage of the amount you borrow) this will not affect the rate
-                        you are offered or the amount you will pay back. The lenders we work with could pay commission at different rates. All finance is subject to status and income. Terms and conditions apply. Applicants must be 18 years or over. We
-                        are only able to offer finance products from these providers. LINGsCARS.com Limited are registered with the Information Commissioner's Office under registration number: Z1098490</p>
-
-                    <a href="https://motorcomplete.co.uk" target="_blank" rel="noopener" class="footer__powered-by">
-                <svg class="footer__powered-by-svg" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 498.78 79.48" role="img"><title>Car lease broker websites by MotorComplete</title><g fill="currentColor"><path d="M139.5 49.84v16.02h-5.94V50.14c0-4.56-2.4-7.38-6.18-7.38-4.62-.06-7.02 3.24-7.02 9.12v13.98h-5.94V50.14c0-4.56-2.4-7.38-5.88-7.38-3.66 0-7.38 2.34-7.38 8.04v15.06h-5.88V37.84h5.88v4.62c1.14-3.3 4.92-5.34 8.76-5.34 4.08 0 7.5 2.16 9.18 5.88 2.4-4.86 6.78-5.88 9.6-5.88 7.02 0 10.8 4.74 10.8 12.72ZM145.5 51.82c0-8.88 6.72-14.7 14.7-14.7s14.76 5.82 14.76 14.7-6.78 14.76-14.76 14.76-14.7-5.88-14.7-14.76Zm23.58 0c0-5.4-4.08-9.18-8.88-9.18s-8.82 3.78-8.82 9.18 4.02 9.24 8.82 9.24 8.88-3.78 8.88-9.24ZM195 37.85v4.92h-6v23.1h-5.88v-23.1h-5.04v-4.92h5.04v-10.5H189v10.5h6ZM197.58 51.82c0-8.88 6.72-14.7 14.7-14.7s14.76 5.82 14.76 14.7-6.78 14.76-14.76 14.76-14.7-5.88-14.7-14.76Zm23.58 0c0-5.4-4.08-9.18-8.88-9.18s-8.82 3.78-8.82 9.18 4.02 9.24 8.82 9.24 8.88-3.78 8.88-9.24ZM252 38.15l-1.02 5.58c-1.56-.72-3-.96-4.14-.96-5.1 0-7.5 5.46-7.5 13.02v10.08h-5.94V37.85h5.94v6.3c1.44-4.92 4.26-7.02 7.86-7.02 1.92 0 3.9.48 4.8 1.02ZM253.62 51.82c0-8.88 7.02-14.7 15.12-14.7 4.56 0 8.46 1.86 10.92 4.8l-3.9 3.66c-1.62-1.8-4.08-2.94-6.9-2.94-5.22 0-9.36 3.84-9.36 9.18s4.14 9.24 9.36 9.24c2.82 0 5.28-1.14 6.9-2.94l3.9 3.66c-2.46 2.94-6.36 4.8-10.92 4.8-8.1 0-15.12-5.88-15.12-14.76ZM282.96 51.82c0-8.88 6.72-14.7 14.7-14.7s14.76 5.82 14.76 14.7-6.78 14.76-14.76 14.76-14.7-5.88-14.7-14.76Zm23.58 0c0-5.4-4.08-9.18-8.88-9.18s-8.82 3.78-8.82 9.18 4.02 9.24 8.82 9.24 8.88-3.78 8.88-9.24ZM363 49.84v16.02h-5.94V50.14c0-4.56-2.4-7.38-6.18-7.38-4.62-.06-7.02 3.24-7.02 9.12v13.98h-5.94V50.14c0-4.56-2.4-7.38-5.88-7.38-3.66 0-7.38 2.34-7.38 8.04v15.06h-5.88V37.84h5.88v4.62c1.14-3.3 4.92-5.34 8.76-5.34 4.08 0 7.5 2.16 9.18 5.88 2.4-4.86 6.78-5.88 9.6-5.88 7.02 0 10.8 4.74 10.8 12.72ZM400.32 51.88c0 8.94-6.3 14.7-13.92 14.7-3.96 0-7.86-1.68-9.72-4.86v17.76h-5.88V37.84h5.88v4.2c1.86-3.18 5.94-4.92 9.72-4.92 7.56 0 13.92 5.88 13.92 14.76Zm-5.94.06c0-5.28-3.84-9.3-8.7-9.3s-8.94 3.66-8.94 9.3 4.62 9.12 8.94 9.12c4.86 0 8.7-3.84 8.7-9.12ZM406.68 65.86V22.61h5.88v43.26h-5.88ZM447.42 54.22H425.1c.78 4.56 4.14 6.9 8.64 6.9 3.3 0 6.36-1.5 7.92-4.08l4.68 2.34c-2.46 4.68-7.5 7.2-12.84 7.2-8.1 0-14.46-5.94-14.46-14.82s6.48-14.64 14.46-14.64 14.04 5.76 14.04 14.58c0 .78-.06 1.62-.12 2.52Zm-5.76-4.74c-.6-4.38-3.78-6.9-8.1-6.9s-7.56 2.22-8.4 6.9h16.5ZM467.64 37.85v4.92h-6v23.1h-5.88v-23.1h-5.04v-4.92h5.04v-10.5h5.88v10.5h6ZM498.66 54.22h-22.32c.78 4.56 4.14 6.9 8.64 6.9 3.3 0 6.36-1.5 7.92-4.08l4.68 2.34c-2.46 4.68-7.5 7.2-12.84 7.2-8.1 0-14.46-5.94-14.46-14.82s6.48-14.64 14.46-14.64 14.04 5.76 14.04 14.58c0 .78-.06 1.62-.12 2.52Zm-5.76-4.74c-.6-4.38-3.78-6.9-8.1-6.9s-7.56 2.22-8.4 6.9h16.5Z" /></g><g fill="#fff"><path d="M101.02.7c3.26 0 4.62 2.4 4.62 4.8s-1.36 4.75-4.62 4.75h-3.81v5.61h-2.27V.7h6.07Zm-.13 7.48c1.76 0 2.49-1.34 2.49-2.68s-.7-2.73-2.4-2.73h-3.76v5.41h3.67ZM106.66 10.72c0-3.26 2.46-5.39 5.39-5.39s5.41 2.13 5.41 5.39-2.49 5.41-5.41 5.41-5.39-2.16-5.39-5.41Zm8.65 0c0-1.98-1.5-3.37-3.26-3.37s-3.23 1.39-3.23 3.37 1.47 3.39 3.23 3.39 3.26-1.39 3.26-3.39ZM132.42 5.59h2.33l-3.76 10.28h-1.83L126.5 8.5l-2.57 7.37h-1.78l-3.89-10.28h2.33l2.46 7.02 2.44-7.02h2.02l2.46 7.02 2.44-7.02ZM146.01 11.6h-8.19c.29 1.67 1.52 2.53 3.17 2.53 1.21 0 2.33-.55 2.9-1.5l1.72.86c-.9 1.72-2.75 2.64-4.71 2.64-2.97 0-5.3-2.18-5.3-5.43s2.38-5.37 5.3-5.37 5.15 2.11 5.15 5.35c0 .29-.02.59-.04.92Zm-2.11-1.74c-.22-1.61-1.39-2.53-2.97-2.53s-2.77.81-3.08 2.53h6.05ZM155.19 5.7l-.37 2.05c-.57-.26-1.1-.35-1.52-.35-1.87 0-2.75 2-2.75 4.78v3.7h-2.18V5.59h2.18V7.9c.53-1.8 1.56-2.57 2.88-2.57.7 0 1.43.18 1.76.37ZM166.23 11.6h-8.19c.29 1.67 1.52 2.53 3.17 2.53 1.21 0 2.33-.55 2.9-1.5l1.72.86c-.9 1.72-2.75 2.64-4.71 2.64-2.97 0-5.3-2.18-5.3-5.43s2.38-5.37 5.3-5.37 5.15 2.11 5.15 5.35c0 .29-.02.59-.04.92Zm-2.11-1.74c-.22-1.61-1.39-2.53-2.97-2.53s-2.77.81-3.08 2.53h6.05ZM176.59 0h2.16v15.86h-2.16v-1.54c-.68 1.17-2.16 1.8-3.54 1.8-2.79 0-5.11-2.16-5.11-5.41s2.31-5.39 5.08-5.39c1.45 0 2.88.62 3.56 1.78V0Zm-.02 10.69c0-2.07-1.69-3.34-3.28-3.34-1.76 0-3.19 1.41-3.19 3.34s1.43 3.41 3.19 3.41 3.28-1.34 3.28-3.41ZM197.82 10.72c0 3.26-2.33 5.41-5.1 5.41-1.39 0-2.88-.64-3.56-1.8v1.54H187V0h2.16v7.11c.68-1.17 2.11-1.78 3.56-1.78 2.79 0 5.1 2.11 5.1 5.39Zm-2.18-.02c0-1.94-1.41-3.34-3.19-3.34-1.58 0-3.28 1.28-3.28 3.34s1.56 3.41 3.28 3.41 3.19-1.5 3.19-3.41ZM206.82 5.59h2.33l-6.38 15.27h-2.29l2.22-5.46-4.12-9.81h2.33l2.95 7.15 2.95-7.15Z" /></g><g fill="currentColor"><path d="M3.96 71.11c3.12 1.15 6.62-.46 7.77-3.59L24.4 33.16c1.15-3.12-.46-6.62-3.59-7.77-3.12-1.15-6.62.46-7.77 3.59L.37 63.34c-1.15 3.12.46 6.62 3.59 7.77ZM24.39 71.11c3.12 1.15 6.62-.46 7.77-3.59l12.67-34.36c1.15-3.12-.46-6.62-3.59-7.77-3.12-1.15-6.62.46-7.77 3.59L20.8 63.34c-1.15 3.12.46 6.62 3.59 7.77ZM44.81 71.11c3.12 1.15 6.62-.46 7.77-3.59l12.67-34.36c1.15-3.12-.46-6.62-3.59-7.77-3.12-1.15-6.62.46-7.77 3.59L41.22 63.34c-1.15 3.12.46 6.62 3.59 7.77Z" /><circle cx="66.66" cy="65.67" r="6.4" /></g></svg>
-            </a>
-                </div>
-            </div>
-        </footer>
-
-
-
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">LINGsCARS</a>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#search" class="text-gray-700 hover:text-blue-600">Search</a>
+        <a href="#offers" class="text-gray-700 hover:text-blue-600">Deals</a>
+        <a href="#brands" class="text-gray-700 hover:text-blue-600">Manufacturers</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LedsAMqAAAAABL4ACLplvTXMMeVgVU64M4s8juh"></script>
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Lease Your Dream Car</h1>
+      <p class="text-lg md:text-2xl mb-6">Flexible deals. Instant quotes. No hidden fees.</p>
+      <form class="flex flex-wrap justify-center gap-4 bg-white bg-opacity-20 p-4 rounded-lg">
+        <input type="text" placeholder="Search brand or model" class="px-4 py-2 rounded border border-white text-black">
+        <select class="px-4 py-2 rounded border border-white text-black">
+          <option>Vehicle Type</option>
+          <option>Car</option>
+          <option>Van</option>
+        </select>
+        <select class="px-4 py-2 rounded border border-white text-black">
+          <option>Lease Type</option>
+          <option>Personal</option>
+          <option>Business</option>
+        </select>
+        <button type="submit" class="bg-yellow-400 px-4 py-2 rounded font-bold hover:bg-yellow-300">Search</button>
+      </form>
+    </div>
+  <section id="offers" class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">Top Car Leasing Deals</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/grandland-ultimate-hybrid.jpg" alt="Vauxhall Grandland" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Vauxhall Grandland GS 73kWh</h3>
+        <p class="text-gray-700">£188.83/mo • 24 mo • 5k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/id3-pro-58kwh.jpg" alt="Volkswagen ID.3" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Volkswagen ID.3 Match Pro S</h3>
+        <p class="text-gray-700">£280.79/mo • 48 mo • 6k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/2008-gt.jpg" alt="Peugeot 2008" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Peugeot 2008 PureTech 130 GT</h3>
+        <p class="text-gray-700">£207.18/mo • 36 mo • 5k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <!-- Add more deals similarly -->
+    </div>
+  </div>
+</section>
 
-    <script src="/scripts/vendor/cookieconsent.umd.js"></script>
-    <script type="module">
-        CookieConsent.run({ cookie: { name: 'ml_cookie_consent', }, categories: { necessary: { enabled: true, readOnly: true } }, guiOptions: { consentModal: { position: 'bottom left' } }, language: { default: 'en', translations: { en: { consentModal: { title:
-        '', description: 'We use cookies to ensure you get the best experience on our website. <a href="/privacy-policy/" target="_blank">Learn more</a>', acceptAllBtn: 'Ok', }, } } } });
-    </script>
+  <!-- Premium Cars -->
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold">Premium Cars</h2>
+      <a href="https://www.lingscars.com/car-lease-deals/" class="text-blue-600 hover:underline">More Cars →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/tonale-veloce.jpg" alt="Alfa Romeo Tonale" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Alfa Romeo Tonale Veloce</h3>
+        <p class="text-gray-700">£286.03/mo • 36 mo • 5k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <div class="bg-gray-50 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/5008-gt.jpg" alt="Peugeot 5008" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Peugeot 5008 1.5 BlueHDi GT</h3>
+        <p class="text-gray-700">£222.78/mo • 36 mo • 5k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <!-- Add more premium cars similarly -->
+    </div>
+  </div>
+</section>
 
-    <script src="/dist/js/motorcomplete.min.js?v=638862237337911582"></script>
+  <!-- Super Savers -->
+<section class="py-12 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold">Super Savers</h2>
+      <a href="https://www.lingscars.com/car-lease-deals/" class="text-blue-600 hover:underline">More Cars →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/corsa-ultimate.jpg" alt="Vauxhall Corsa" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Vauxhall Corsa 1.2 Turbo Ultimate</h3>
+        <p class="text-gray-700">£174.12/mo • 36 mo • 5k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 p-4">
+        <img src="https://www.lingscars.com/images/cars/500-mild-hybrid.jpg" alt="Fiat 500" class="rounded mb-4">
+        <h3 class="text-xl font-semibold mb-2">Fiat 500 1.0 Mild Hybrid</h3>
+        <p class="text-gray-700">£161.00/mo • 36 mo • 5k mi/yr</p>
+        <a href="#" class="text-blue-600 mt-4 inline-block">View Offer →</a>
+      </div>
+      <!-- Add more saver cars similarly -->
+    </div>
+  </div>
+</section>
 
+  <!-- Brand Logos -->
+  <section id="brands" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">Top Manufacturers</h2>
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-4 items-center">
+        <img src="https://cms.motorcomplete.co.uk/media/1012/audi.jpg?width=150&format=webp" alt="Audi" class="mx-auto h-12">
+        <img src="https://cms.motorcomplete.co.uk/media/1014/bmw.jpg?width=150&format=webp" alt="BMW" class="mx-auto h-12">
+        <img src="https://cms.motorcomplete.co.uk/media/1022/honda.jpg?width=150&format=webp" alt="Honda" class="mx-auto h-12">
+        <img src="https://cms.motorcomplete.co.uk/media/1026/jeep.jpg?width=150&format=webp" alt="Jeep" class="mx-auto h-12">
+        <img src="https://cms.motorcomplete.co.uk/media/1029/land-rover.jpg?width=150&format=webp" alt="Land Rover" class="mx-auto h-12">
+        <img src="https://cms.motorcomplete.co.uk/media/1031/lexus.jpg?width=150&format=webp" alt="Lexus" class="mx-auto h-12">
+      </div>
+    </div>
+  </section>
 
-
-
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-800 text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="mb-2">&copy; 2025 Lings Cars. All rights reserved.</p>
+      <p class="text-sm">Inspired by the original LINGsCARS design, reimagined professionally.</p>
+    </div>
+  </footer>
 
 </body>
-
 </html>
